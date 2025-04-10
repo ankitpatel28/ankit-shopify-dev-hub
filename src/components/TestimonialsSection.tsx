@@ -59,7 +59,7 @@ const TestimonialsSection = () => {
         </div>
         
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
-          <div className="lg:w-1/3 relative">
+          <div className="lg:w-1/3 relative h-64 flex items-center justify-center">
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -70,7 +70,7 @@ const TestimonialsSection = () => {
                   zIndex: index === active ? 10 : 0
                 }}
                 transition={{ duration: 0.5 }}
-                className="absolute inset-0 flex justify-center"
+                className="absolute inset-0 flex items-center justify-center"
               >
                 <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-gold shadow-xl">
                   <img 

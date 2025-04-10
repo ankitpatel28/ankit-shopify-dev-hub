@@ -1,5 +1,5 @@
 
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
 const expertiseAreas = [
@@ -50,29 +50,8 @@ const expertiseAreas = [
 ];
 
 const ShopifyExpertiseSection = () => {
-  const sectionRef = useRef(null);
-  
-  useEffect(() => {
-    const paralaxEffect = () => {
-      const scrolled = window.scrollY;
-      const section = sectionRef.current;
-      
-      if (section) {
-        const elements = section.querySelectorAll('.parallax-element');
-        elements.forEach((el, index) => {
-          const speed = 0.1 + (index * 0.05);
-          const yPos = -(scrolled * speed);
-          el.style.transform = `translateY(${yPos}px)`;
-        });
-      }
-    };
-    
-    window.addEventListener('scroll', paralaxEffect);
-    return () => window.removeEventListener('scroll', paralaxEffect);
-  }, []);
-
   return (
-    <section ref={sectionRef} className="py-24 px-4 md:px-8 bg-sand-200 relative overflow-hidden">
+    <section className="py-24 px-4 md:px-8 bg-sand-200 relative overflow-hidden">
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="mb-16 text-center">
           <h2 className="text-4xl md:text-5xl font-serif text-gold mb-4">Shopify Expertise</h2>
@@ -94,12 +73,11 @@ const ShopifyExpertiseSection = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <div className="parallax-element">
+              <div className="relative overflow-hidden rounded-lg shadow-xl" style={{ maxHeight: '400px' }}>
                 <img 
                   src={area.image} 
                   alt={area.title} 
-                  className="w-full h-auto object-cover rounded-lg shadow-xl"
-                  style={{ maxHeight: '400px' }}
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
