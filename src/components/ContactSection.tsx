@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from "@/hooks/use-toast";
@@ -28,11 +27,10 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // EmailJS configuration
-    // You need to sign up on emailjs.com and get your service ID, template ID, and user ID
-    const serviceId = 'service_default'; // Replace with your EmailJS service ID
-    const templateId = 'template_default'; // Replace with your EmailJS template ID
-    const userId = 'user_default'; // Replace with your EmailJS user ID
+    // EmailJS configuration with provided credentials
+    const serviceId = 'service_milgb0q';
+    const templateId = 'hg4zq7c';
+    const userId = 'ankitjpatel28@gmail.com';
     
     try {
       // Prepare the template parameters
@@ -41,7 +39,7 @@ const ContactSection = () => {
         from_email: formData.email,
         subject: formData.subject,
         message: formData.message,
-        to_name: 'Ankit Patel', // The recipient's name
+        to_name: 'Ankit Patel',
         reply_to: formData.email
       };
       
