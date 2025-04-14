@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from "@/hooks/use-toast";
@@ -30,7 +31,7 @@ const ContactSection = () => {
     // EmailJS configuration with provided credentials
     const serviceId = 'service_milgb0q';
     const templateId = 'hg4zq7c';
-    const userId = 'ankitjpatel28@gmail.com';
+    const userId = 'PdHfLzLM3FQ8jPTIm';
     
     try {
       // Prepare the template parameters
