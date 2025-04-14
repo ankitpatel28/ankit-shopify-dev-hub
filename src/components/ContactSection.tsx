@@ -30,7 +30,7 @@ const ContactSection = () => {
     
     // EmailJS configuration with provided credentials
     const serviceId = 'service_milgb0q';
-    const templateId = 'hg4zq7c';
+    const templateId = 'template_9vzyh26';
     const userId = 'PdHfLzLM3FQ8jPTIm';
     
     try {
