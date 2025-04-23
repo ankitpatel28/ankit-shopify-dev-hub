@@ -41,7 +41,7 @@ const ContactSection = () => {
         message: formData.message,
         to_name: 'Ankit Patel',
         reply_to: formData.email,
-        to_email: 'ankitjpatel28@gmail.com'
+        email: 'ankitjpatel28@gmail.com'
       };
       
       // Send the email
