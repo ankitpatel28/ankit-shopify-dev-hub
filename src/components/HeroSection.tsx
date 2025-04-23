@@ -23,10 +23,10 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 z-0" 
         style={{ 
-          backgroundImage: "url('https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')",
+          backgroundImage: "url('https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          filter: 'brightness(0.8)'
+          filter: 'brightness(0.7)'
         }}
         ref={parallaxRef}
       />
