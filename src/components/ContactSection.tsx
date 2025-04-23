@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from "@/hooks/use-toast";
 import { Label } from "@/components/ui/label";
@@ -19,13 +18,6 @@ const ContactSection = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
   
-  useEffect(() => {
-    // Initialize EmailJS with public key
-    emailjs.init({
-      publicKey: "PdHfLzLM3FQ8jPTIm",
-    });
-  }, []);
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -34,6 +26,11 @@ const ContactSection = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
+    // EmailJS configuration with provided credentials
+    const serviceId = 'service_milgb0q';
+    const templateId = 'template_8w21w5k';
+    const userId = 'PdHfLzLM3FQ8jPTIm';
     
     try {
       // Prepare the template parameters
@@ -47,7 +44,7 @@ const ContactSection = () => {
       };
       
       // Send the email
-      await emailjs.sendForm('contact_service', 'contact_form', templateParams);
+      await emailjs.send(serviceId, templateId, templateParams, userId);
       
       // Show success message
       toast({
