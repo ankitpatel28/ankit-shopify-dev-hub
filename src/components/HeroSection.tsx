@@ -1,7 +1,7 @@
-
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import Logo from './Logo';
 
 const HeroSection = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -34,7 +34,7 @@ const HeroSection = () => {
       {/* Overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sand-100/30 to-sand-100 z-10"></div>
       
-      {/* Text container */}
+      {/* Content container */}
       <div className="relative z-20 flex items-center justify-center w-full h-full px-6">
         <div className="max-w-7xl w-full mx-auto">
           <motion.div 
@@ -43,6 +43,16 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            {/* Add Logo at the top of the content */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="mb-8"
+            >
+              <Logo />
+            </motion.div>
+
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-serif text-gold mb-4"
               initial={{ opacity: 0 }}
