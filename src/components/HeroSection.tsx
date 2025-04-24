@@ -27,19 +27,19 @@ const HeroSection = () => {
           backgroundImage: "url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80')",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
-          filter: 'brightness(0.5)' // Darken the background more
+          filter: 'brightness(0.7)' // Slightly less dark
         }}
         ref={parallaxRef}
       />
 
       {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/30 to-black/50 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-sand-200/30 to-sand-200 z-10"></div>
       
       {/* Content container */}
       <div className="relative z-20 flex items-center justify-center w-full h-full px-6">
         <div className="max-w-7xl w-full mx-auto">
           <motion.div 
-            className="bg-black/40 backdrop-blur-sm p-8 md:p-12 rounded-lg border border-gold/20 max-w-2xl"
+            className="bg-sand-200/70 backdrop-blur-sm p-8 md:p-12 rounded-lg border border-gold/20 max-w-2xl"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -55,7 +55,7 @@ const HeroSection = () => {
             </motion.div>
 
             <motion.h1 
-              className="text-4xl md:text-5xl lg:text-6xl font-serif text-white mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-serif text-gold mb-4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.8 }}
