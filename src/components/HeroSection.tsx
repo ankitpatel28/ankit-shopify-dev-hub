@@ -1,7 +1,7 @@
+
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
-import Logo from './Logo';
 
 const HeroSection = () => {
   const parallaxRef = useRef<HTMLDivElement>(null);
@@ -43,16 +43,6 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            {/* Add Logo at the top of the content */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 0.8 }}
-              className="mb-8"
-            >
-              <Logo />
-            </motion.div>
-
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-serif text-gold mb-4"
               initial={{ opacity: 0 }}
